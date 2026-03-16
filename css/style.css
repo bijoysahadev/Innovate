@@ -6,6 +6,10 @@
     list-style: none ;
     text-decoration: none ;
 }
+h1,h2,h3,h4,h5,h6 {
+  margin: 0px;
+  padding: 0px;
+}
 /* common css ensds here */
 /* navbar css starts here */
 nav {
@@ -303,7 +307,7 @@ nav .nav-button:hover {
   color: white;
   background-color: rgba(22, 12, 109,1);
 }
-.card {
+.what {
   margin-top: 20px;
 }
 .what .card-img-top{
@@ -320,8 +324,21 @@ nav .nav-button:hover {
   padding-right: 37px;
   padding-bottom: 49px;
   border: none !important;
+  transition: .5s;
+  border-radius: 20px;
+
   
 }
+.what .card:hover {
+   background-color: rgba(107, 98, 197,1);
+}
+.what .card:hover .card-title {
+  color: rgba(250, 250, 254,1) !important;
+}
+.what .card:hover .card-text {
+  color: rgba(250, 250, 254,1) !important;
+}
+
 .what .card .btn {
   padding: 20px 40px;
   background-color: transparent;
@@ -334,11 +351,12 @@ nav .nav-button:hover {
    color: rgba(20, 17, 53,1);
    border-radius: 100px;
    margin-left: 60px;
+  
 }
 .what .card .btn:hover {
-  background-color: rgba(27, 191, 0,1);
-  border: 1px solid rgba(27, 191, 0,1);
-  color: white;
+   background-color: rgba(255, 255, 255,0.4) !important;
+  border: 1px solid rgba(255, 255, 255,0.4) ;
+  color: rgba(250, 250, 254,1);
    
 }
 .what .card .card-title {
@@ -346,18 +364,249 @@ nav .nav-button:hover {
    font-size: 30px !important;
    font-weight: 700 !important;
   
-   color: rgba(20, 17, 53,1) !important;
+   color: #141135 !important;
    padding-bottom: 16px;
    padding-top: 32px;
-   width: 240px;
+   color: rgba(20, 17, 53,1);
+    padding-left: 49px;
    margin: 0 auto;
+   transition: .5s;
 }
 .what .card .card-text{
   font-family: "Open Sans", sans-serif !important;
    font-size: 18px !important;
    font-weight: 400 !important;
-   color: rgba(114, 110, 158,1);
+
+ color:rgba(114, 110, 158,1);
    width: 297px;
    margin: 0 auto;
+   transition: .5s;
   
+}
+.what .container .row {
+ padding-bottom: 30px;
+}
+.what .container .card a {
+  position: relative;
+  z-index: 2;
+}
+.what .container .card a::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 52%;
+  background-color:rgba(27, 191, 0,0.3);
+  content: "";
+  border-radius: 100px;
+  transition: .5s;
+ 
+  z-index: -1;
+ border: transparent;
+
+}
+.what .container .card a:hover::after {
+  width: 100%;
+  background-color: rgba(255, 255, 255,0.4) !important;
+ 
+
+  
+}
+/* what css ends here */
+/* impact css starts here */
+.import {
+  background: url(../Images/import.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  /* padding-left: 379px;
+  padding-right: 561px; */
+}
+.import .container .row 
+{
+  justify-content: space-around !important;
+}
+.import  h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #141135;
+   text-align: center;
+}
+.import h5 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(114, 110, 158,1);
+    text-align: center;
+    width: 682px;
+    margin: 0 auto;
+  
+}
+
+
+.import .container .import-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+}
+.import .container .import-main .import-left h3  {
+   font-family: "Open Sans", sans-serif;
+    line-height: 36px;
+    font-size: 30px;
+    color: rgba(20, 17, 53,1);
+    font-weight: 700;
+    padding-top: 75px;
+}
+.import .container .import-main .import-left p{ 
+  font-family: "Paprika", system-ui;
+   font-size: 18px;
+   font-weight: 400;
+   color: rgba(114, 110, 158,1);
+   width: 343px;
+   text-align: center;
+}
+/* import css ends here */
+/* plan html css starts here */
+.plan .container .card {
+  width: 100% !important;
+  border: none !important;
+  padding: 60px 0px;
+  transition: .5s;
+
+ 
+
+}
+.plan .container .row {
+  column-gap: 40px;
+  justify-content: space-around !important;
+  align-items: center;
+}
+.plan .container .card .card-img-top{
+  width: 100%;
+}
+.plan .container .card .card-body {
+  padding: 0 !important;
+}
+.plan .container .card .card-head {
+     font-family: "Open Sans", sans-serif;
+     color: rgba(20, 17, 53,1);
+     font-size: 30px;
+     font-weight: 700;
+     text-align: center;
+}
+.plan .container .card .card-body .card-title {
+  font-family: "Nunito", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: rgba(27, 191, 0,1);
+  text-align: center;
+}
+.plan .container .card .card-body .card-title span {
+    font-family: "Quicksand", sans-serif;
+    font-size: 24px;
+    color: rgba(27, 191, 0,1);
+    line-height: 25px;
+    font-weight: 500;
+    /* padding-bottom: 5px; */
+}
+.plan .container .card .card-body .card-text {
+  font-family: "Paprika", system-ui;
+  font-size:18px ;
+  font-weight: 400;
+  color: rgba(114, 110, 158,1);
+  text-align: center;
+}
+.plan .container .card:hover {
+
+  transform: scale(1.101);
+  background-color: rgba(107, 98, 197,1);
+}
+/* plan css ends here */
+/* think css starts here */
+.think {
+  padding-top: 50px;
+}
+.think .container h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: rgba(20, 17, 53,1);
+  text-align: center;
+  padding-bottom: 80px;
+}
+.think .container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.think .container .box .box-one {
+    width: 147px;
+    height: 147px;
+    background-color: red;
+    position: absolute;
+    top: -16%;
+    right: 41%;
+    transform: (-50%,-50%);
+    border-radius: 50%;
+}
+.think .container .box .box-one img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.think .container .box .box-two {
+  width:100%;
+ 
+  background-color: rgba(255, 255, 255,1);
+
+}
+.think .container .box .box-two ul  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 90px;
+  column-gap: 7px;
+  
+}
+.think .container .box .box-two ul li a {
+  font-size: 18px;
+  color: rgba(255, 118, 40,1);
+}
+.think .container .box .box-two p 
+{  font-family: "Paprika", system-ui;
+  font-size: 24px;
+  font-weight:400 ;
+  line-height: 40px;
+  color: rgba(114, 110, 158,1);
+  width: 800px;
+  text-align: center;
+}
+.think .container .box .box-two h5 {
+   font-family: "Open Sans", sans-serif;
+   font-size:25px ;
+   font-weight:700 ;
+   color: rgba(34, 26, 44,1);
+   line-height: 40px;
+   text-align: center;
+}
+.think .container .box .box-two h6
+{  font-family: "Paprika", system-ui;
+  font-size: 16px;
+  font-weight:400 ;
+  line-height: 25px;
+color: rgba(114, 110, 158,1);
+  text-align: center;
+}
+.think .container .fa-circle-chevron-left{
+  font-size: 50px;
+  color: rgba(27, 191, 0,1);
+}
+.think .container .fa-circle-chevron-right{
+  font-size: 50px;
+  color: rgba(27, 191, 0,1);
 }
